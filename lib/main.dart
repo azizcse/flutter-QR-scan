@@ -96,9 +96,15 @@ class _MyAppState extends State<MyApp> {
 
   void flipCamera() {
     this.controller.flipCamera();
+    setState(() {
+      isFrontCamera = !isFrontCamera;
+    });
   }
 
   void toggleFlash() {
     this.controller.toggleFlash();
+    setState(() {
+      isFlashOn = !isFlashOn;
+    });
   }
 }
